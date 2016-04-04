@@ -38,7 +38,7 @@ int numDivisors(int n){
     for(int i = 1; i*i <= n; i++){
         if (n % i == 0) counter += 1 + (i*i != n);
     }
-    cout << n << " has " << counter << " divisors" << endl;
+    return counter;
 };
 
 int gcd(int m, int n){
@@ -71,7 +71,7 @@ int main() {
     } else {
         cout << "Entered number is not a prime number." << endl;
         printDivisors(x);
-        numDivisors(x);
+        cout << x << " has " << numDivisors(x) << " divisors" << endl;
     }
     cout << "Enter a second number: " << endl;
     cin >> y;
